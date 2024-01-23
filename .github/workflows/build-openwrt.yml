@@ -197,7 +197,7 @@ jobs:
         removeArtifacts: true
         tag: ${{ env.FILE_NAME }}
         commit: main
-        token: ${{ secrets.GH_TOKEN }}
+        token: ${{ secrets.ACTIONS_TRIGGER_PAT  }}
         artifacts: ${{ env.FIRMWARE }}/*
         body: |
           - 默认IP：192.168.2.1 默认密码：password
@@ -210,11 +210,11 @@ jobs:
         retain_days: 7
         keep_minimum_runs: 10
 
-    - name: Remove old Releases
-      uses: dev-drprasad/delete-older-releases@master
-      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
-      with:
-        keep_latest: 3
-        delete_tags: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    # - name: Remove old Releases
+    #   uses: dev-drprasad/delete-older-releases@master
+    #   if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+    #   with:
+    #     keep_latest: 3
+    #     delete_tags: true
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
