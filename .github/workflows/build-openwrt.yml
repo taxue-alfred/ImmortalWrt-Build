@@ -197,7 +197,7 @@ jobs:
         removeArtifacts: true
         tag: ${{ env.FILE_NAME }}
         commit: main
-        token: ${{ secrets.ACTIONS_TRIGGER_PAT  }}
+        token: ${{ secrets.ACTIONS_TRIGGER_PAT}}
         artifacts: ${{ env.FIRMWARE }}/*
         body: |
           - 默认IP：192.168.2.1 默认密码：password
@@ -217,4 +217,4 @@ jobs:
         keep_latest: 3
         delete_tags: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_TRIGGER_PAT}}
