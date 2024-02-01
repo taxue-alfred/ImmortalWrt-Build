@@ -18,7 +18,7 @@
 # sed -i '$a src-git my_packages https://github.com/Gzxhwq/openwrt-packages' feeds.conf.default
 # sed -i '$a src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages' feeds.conf.default
 
-#Add external packages
+# Add external packages
 # sed -i '/iptables-mod-socket/d' ./package/others/my_packages/sing-box/Makefile
 # git submodule add https://github.com/xiaorouji/openwrt-passwall.git package/others/luci-app-passwall
 # git submodule add https://github.com/xiaorouji/openwrt-passwall2.git package/others/luci-app-passwall2
